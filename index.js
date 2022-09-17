@@ -10,6 +10,7 @@ const fs = require("fs");
 const { manager, engineer, intern } = require('./src/qs');
 const prompt = inquirer.createPromptModule();
 const team = [];
+function addMember() {
 
 prompt(questions.menu).then((answer) => {
     if (answer.value === 'Manager'){
@@ -49,6 +50,10 @@ prompt(questions.menu).then((answer) => {
             });
     }
     if (answer.value === "no further additions") {
+       // function addMember(fileName, answer) {
         fs.writeFileSync(`dist/team.html`, pageTemplate(team));
     }
-});
+})
+};
+
+addMember();
