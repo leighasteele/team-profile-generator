@@ -12,7 +12,7 @@ const prompt = inquirer.createPromptModule();
 const team = [];
 
 prompt(questions.menu).then((answer) => {
-    if (answer.value === 'manager'){
+    if (answer.value === 'Manager'){
     prompt(questions.manager).then((data) => {
         const newManager = new Manager(
             data.name,
@@ -24,7 +24,7 @@ prompt(questions.menu).then((answer) => {
         addMember();
         });
     }
-    if (answer.value === 'engineer'){
+    if (answer.value === 'Engineer'){
         prompt(questions.engineer).then((data) => {
             const newEngineer = new Engineer(
                 data.name,
@@ -36,7 +36,7 @@ prompt(questions.menu).then((answer) => {
             addMember();
             });
     }
-    if (answer.value === 'intern'){
+    if (answer.value === 'Intern'){
         prompt(questions.intern).then((data) => {
             const newIntern = new Intern(
                 data.name,
