@@ -3,7 +3,7 @@ const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 
 // TODO: CODE GOES HERE
-const questions = require("./src/questions");
+const questions = require("./src/qs");
 const pageTemplate = require("./src/page-template");
 const inquirer = require("inquirer");
 const fs = require("fs");
