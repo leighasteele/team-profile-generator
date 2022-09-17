@@ -14,7 +14,7 @@ const team = [];
 prompt(questions.menu).then((answer) => {
     if (answer.value === 'manager'){
     prompt(questions.manager).then((data) => {
-        const newManager = new manager(
+        const newManager = new Manager(
             data.name,
             data.id,
             data.email,
@@ -26,7 +26,7 @@ prompt(questions.menu).then((answer) => {
     }
     if (answer.value === 'engineer'){
         prompt(questions.engineer).then((data) => {
-            const newEngineer = new engineer(
+            const newEngineer = new Engineer(
                 data.name,
                 data.id,
                 data.email,
@@ -38,7 +38,7 @@ prompt(questions.menu).then((answer) => {
     }
     if (answer.value === 'intern'){
         prompt(questions.intern).then((data) => {
-            const newIntern = new intern(
+            const newIntern = new Intern(
                 data.name,
                 data.id,
                 data.email,

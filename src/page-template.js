@@ -1,9 +1,12 @@
 // PROVIDED BY INSTRUCTOR 2022-09-09
+
+const { Manager } = require("./qs");
+
 // create the team
 const generateTeam = team => {
 
-    // create the manager html
-    const generateManager = manager => {
+    // create theager html
+    const generateManager = (manager) => {
         return `
         <div>
             <div>
@@ -29,8 +32,8 @@ const generateTeam = team => {
         `;
     };
 
-    // create the html for engineers
-    const generateEngineer = engineer => {
+    // create the html for Engineers
+    const generateEngineer = (engineer) => {
         return `
         <div>
             <div>
@@ -54,8 +57,8 @@ const generateTeam = team => {
         `;
     };
 
-    // create the html for interns
-    const generateIntern = intern => {
+    // create the html for Interns
+    const generateIntern = (intern) => {
         return `
         <div>
     <div>
@@ -79,16 +82,16 @@ const generateTeam = team => {
 
     html.push(team
         .filter(employee => employee.getRole() === "Manager")
-        .map(manager => generateManager(manager))
+        .map(Manager => generateManager(Manager))
     );
     html.push(team
         .filter(employee => employee.getRole() === "Engineer")
-        .map(engineer => generateEngineer(engineer))
+        .map(Engineer => generateEngineer(Engineer))
         .join("")
     );
     html.push(team
         .filter(employee => employee.getRole() === "Intern")
-        .map(intern => generateIntern(intern))
+        .map(Intern => generateIntern(Intern))
         .join("")
     );
 
