@@ -8,7 +8,7 @@ const pageTemplate = require("./src/page-template");
 const inquirer = require("inquirer");
 const fs = require("fs");
 const { manager, engineer, intern } = require('./src/qs');
-const prompt = inquirer.createQuestionModule();
+const prompt = inquirer.createPromptModule();
 const team = [];
 
 prompt(questions.menu).then((answer) => {
