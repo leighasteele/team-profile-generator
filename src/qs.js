@@ -27,7 +27,7 @@ const questions = {
       name: "value",
       type: "rawlist",
       message: "add another?",
-      choices: ["engineer", "intern", "no further additions"],
+      choices: ["manager", "engineer", "intern", "no further additions"],
     },
   ],
 
@@ -59,7 +59,7 @@ const questions = {
       name: "value",
       type: "rawlist",
       message: "add another?",
-      choices: ["engineer", "intern", "no further additions"],
+      choices: ["manager", "engineer", "intern", "no further additions"],
     },
   ],
 
@@ -91,7 +91,7 @@ const questions = {
       name: "value",
       type: "rawlist",
       message: "add another?",
-      choices: ["engineer", "intern", "no further additions"],
+      choices: ["manager", "engineer", "intern", "no further additions"],
     },
   ],
 };
