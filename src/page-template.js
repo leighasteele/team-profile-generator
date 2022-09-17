@@ -7,21 +7,21 @@ const generateTeam = team => {
         return `
         <div>
             <div>
-                <h2>${manager.showName()}</h2>
+                <h2>${manager.getName()}</h2>
                 <h3>
-                    <i class="fas fa-mug-hot mr-2"></i> ${manager.showRole()}
+                    <i class="fas fa-mug-hot mr-2"></i> ${manager.getRole()}
                 </h3>
             </div>
             <div>
                 <ul>
                     <li>
-                        ID: ${manager.showId()}
+                        ID: ${manager.getId()}
                     </li>
                     <li>
-                        Email: <a href="mailto:${manager.showEmail()}">${manager.showEmail()}</a>
+                        Email: <a href="mailto:${manager.getEmail()}">${manager.getEmail()}</a>
                     </li>
                     <li>
-                        Office number: ${manager.showOfficeNumber()}
+                        Office number: ${manager.getOfficeNumber()}
                     </li>
                 </ul>
             </div>
@@ -34,19 +34,19 @@ const generateTeam = team => {
         return `
         <div>
             <div>
-                <h2>${engineer.showName()}</h2>
+                <h2>${engineer.getName()}</h2>
                 <h3>
-                    <i class="fas fa-glasses mr-2"></i>${engineer.showRole()}
+                    <i class="fas fa-glasses mr-2"></i>${engineer.getRole()}
                 </h3>
             </div>
             <div>
                 <ul>
-                    <li>ID: ${engineer.showId()}</li>
+                    <li>ID: ${engineer.getId()}</li>
                     <li>
-                        Email: <a href="mailto:${engineer.showEmail()}">${engineer.showEmail()}</a>
+                        Email: <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a>
                     </li>
                     <li>
-                        GitHub: <a href="https://github.com/${engineer.showGitHub()}" target="_blank" rel="noopener noreferrer">${engineer.showGitHub()}</a>
+                        GitHub: <a href="https://github.com/${engineer.getGitHub()}" target="_blank" rel="noopener noreferrer">${engineer.getGitHub()}</a>
                     </li>
                 </ul>
             </div>
@@ -59,16 +59,16 @@ const generateTeam = team => {
         return `
         <div>
     <div>
-        <h2>${intern.showName()}</h2>
+        <h2>${intern.getName()}</h2>
         <h3>
-            <i class="fas fa-user-graduate mr-2"></i>${intern.showRole()}
+            <i class="fas fa-user-graduate mr-2"></i>${intern.getRole()}
         </h3>
     </div>
     <div>
         <ul>
-            <li>ID: ${intern.showId()}</li>
-            <li>${intern.showEmail()}</a></li>
-            <li>School: ${intern.showSchool()}</li>
+            <li>ID: ${intern.getId()}</li>
+            <li>${intern.getEmail()}</a></li>
+            <li>School: ${intern.getSchool()}</li>
         </ul>
     </div>
 </div>
@@ -78,16 +78,16 @@ const generateTeam = team => {
     const html = [];
 
     html.push(team
-        .filter(employee => employee.showRole() === "Manager")
+        .filter(employee => employee.getRole() === "Manager")
         .map(manager => generateManager(manager))
     );
     html.push(team
-        .filter(employee => employee.showRole() === "Engineer")
+        .filter(employee => employee.getRole() === "Engineer")
         .map(engineer => generateEngineer(engineer))
         .join("")
     );
     html.push(team
-        .filter(employee => employee.showRole() === "Intern")
+        .filter(employee => employee.getRole() === "Intern")
         .map(intern => generateIntern(intern))
         .join("")
     );
