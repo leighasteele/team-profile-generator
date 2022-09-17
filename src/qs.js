@@ -22,20 +22,14 @@ const questions = {
     },
   ],
 
-
   menu: [
     {
       name: "value",
       type: "rawlist",
       message: "add another?",
-      choices: [
-        "engineer",
-        "intern",
-        "no further additions",
-      ],
+      choices: ["engineer", "intern", "no further additions"],
     },
   ],
-
 
   engineer: [
     {
@@ -60,20 +54,14 @@ const questions = {
     },
   ],
 
-
   menu: [
     {
       name: "value",
       type: "rawlist",
       message: "add another?",
-      choices: [
-        "engineer",
-        "intern",
-        "no further additions",
-      ],
+      choices: ["engineer", "intern", "no further additions"],
     },
   ],
-
 
   intern: [
     {
@@ -98,21 +86,14 @@ const questions = {
     },
   ],
 
-
   menu: [
     {
       name: "value",
       type: "rawlist",
       message: "add another?",
-      choices: [
-        "engineer",
-        "intern",
-        "no further additions",
-      ],
+      choices: ["engineer", "intern", "no further additions"],
     },
   ],
-
-
 };
 
 module.exports = questions;
