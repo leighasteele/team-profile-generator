@@ -7,7 +7,8 @@ const generateTeam = (team) => {
   // create theager html
   const generateManager = (manager) => {
     return `
-
+    <div class="jumbotron jumbotron-fluid">
+    <div class="container">
         <div class = "card col-4 m-2" style = "width: 15rem;">
             <div class = "card-body">
             <div class = "card-title">
